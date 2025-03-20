@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dynamic Plugin Sample</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/public/css/styles.css">
+    </head>
+    <body>
+        <div class="card-face-view">
+            <div class="card-face-container">
+                <p>
+                    Hi <%= given_name %>, you have
+                    <strong><%= accounts_count %> account<%= accounts_count === 1 ? '' : 's' %></strong>
+                    that <%= accounts_count === 1 ? 'qualifies' : 'qualify' %> for our monthly savings program...
+                </p>
+                <p>
+                    <a href="/dynamic">Try authentication again</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="expanded-view">
+            <h1>My Monthly Savings Program</h1>
+            <div class="expanded-info">
+                <img src="/public/images/image.jpg" class="main-image">
+                <p>
+                    Hi <%= given_name %>, you have
+                    <strong><%= accounts_count %> account<%= accounts_count === 1 ? '' : 's' %></strong>
+                    that <%= accounts_count === 1 ? 'qualifies' : 'qualify' %> for our monthly savings program!
+                </p>
+                <p>
+                    <a href="/dynamic">Try authentication again</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
