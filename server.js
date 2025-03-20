@@ -180,7 +180,8 @@ app.get('/dynamic', async (req, res) => {
     const user_accounts_string = await user_accounts_info.text()
     const accounts_data = JSON.parse(user_accounts_string)
 
-    res.render('pages/dynamic', {
+    // Rendering page with "Try again" hyperlink
+    res.render('pages/dynamic_try_again', {
         given_name: id_token.given_name,
         accounts_count: accounts_data.accounts.length
     })
